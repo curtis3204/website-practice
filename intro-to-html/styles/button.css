@@ -1,0 +1,43 @@
+.GOGO-button {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    height: 5vw;
+    width: 10vw;
+    font-size: 1.5vw;
+    background-color: white;
+    color: blue;
+    border: 0.2vw dashed red;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+
+    .GOGO-button:hover {
+      top: 49.5%;
+      left: 49.5%;
+      background-color: #f0f0f0;
+      box-shadow: 10px 10px #ffbdbd;
+    }
+
+    .GOGO-button:focus {
+      top: 49.5%;
+      left: 49.5%;
+      background-color: #d6d6d6;
+    }
+
+  .GO-button {
+    top: 20%;
+    left: 20%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    height: 5vw;
+    width: 10vw;
+    font-size: 1.5vw;
+    background-color: white;
+    color: blue;
+    border: 0.2vw dashed red;
+    border-radius: 5px;
+    cursor: pointer;
+  }

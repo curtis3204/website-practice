@@ -1,0 +1,19 @@
+.textgogo {
+    font-family: Roboto;
+    font-weight:normal;
+    font-style:italic;
+    font-size:5vw;
+    background-color:red;
+    color:white;
+    text-align:center;
+    padding-bottom:3vh;
+    padding-top:3vh;
+  }
+
+
+    .GO:hover {
+      font-size: 5.5vw;
+      cursor: pointer;
+      text-decoration: underline;
+      transition: 1s;
+    }
