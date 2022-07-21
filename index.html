@@ -1,205 +1,241 @@
 <!DOCTYPE html>
 <html>
-    <head>
-    <title>Youtube</title>
-    <style>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <style>
+    ::selection{
+        background-color: #ff7b7b;
+        color:rgb(255, 255, 255);
+    }
+  @media (min-width:901px){
+    body{
+        color: rgb(95, 95, 95);
+        font-family: Roboto;
 
-		
-		.search-bar{
-			font-family: Arial, Helvetica, sans-serif;
-			display: block;
-		}
+    }
 
-		/**/
-		.video-grid{
-			display: grid;
-			grid-template-columns: 1fr 1fr 1fr;
-			column-gap: 30px;
-			row-gap: 10px;
-		}
-		/**/
+    .first{
+        background-image: url(https://img.freepik.com/premium-vector/grid-gray-white-background-vector-illustration-eps-10_23979-425.jpg?w=2000);
+        background-size: 50vw;
+        background-color:rgb(190, 190, 190);
+        background-blend-mode:color-burn ;
+        height:100vh;
+        display: flex;
+        justify-content: center;
+        align-items:center;
+    }
 
-		.IMAGE{
-	    width: 98%;
-			border-style: solid;
-			border-color: gray;
-			border-width: 2px;
-			border-radius: 10px;
-			padding: 5px;
-			
-		}
+    .second{   
+        width: 50vw;   
+        height: 23vh;
+        display:flex;
 
-		/**/
-		.video-info-grid{
-			display: grid;
-			grid-template-columns:3vw 1fr ;
-			margin-top: 10px;
-		}
+        animation: intro 1.3s ease 0.5s 1 ;
+        
+      }
+
+    @keyframes intro {
+        0%{
+            opacity: 0;
+            margin-right: 50%;
+        }
+        100%{
+            opacity: 1;
+            margin-right: 0%;
+        }
+        
+    }
+
+    .left{
+        background-image: url(https://img.freepik.com/premium-vector/grid-gray-white-background-vector-illustration-eps-10_23979-425.jpg?w=2000);
+        background-size: 38vw;
+        display: flex;
+        flex:8;
+        min-width: 700px;
+        border: 3px solid rgb(122, 122, 122);
+        border-radius: 13px;
+        box-shadow: -7px 0px rgb(128, 128, 128);
+        background-color: rgb(255, 255, 255);
+        justify-content: center;
+        cursor:default;  
+        justify-content: center;
+        align-items:center;
+        padding-left: 8%;
+        padding-top: 8%;
+        padding-bottom: 8%;
+        padding-right: 3%;
+
+    }
+
+    
+    .left .left-inside{
+        flex:3;
+        padding-right: 30px;
+        font-weight: 400;
+        font-style: italic;
+        font-size: 19px;
+        word-spacing: 3px;
+        letter-spacing: 1.5px;
+        line-height: 1.5em;
+        cursor:default;  
+    }
+
+    .left .right-inside{
+        flex:1.3;
+        font-style: italic;  
+        cursor:default;    
+    }
+
+    .left .right-inside .top{
+        font-size: 15px;
+        font-weight: 100;
+        letter-spacing: 1px;    
+        cursor:default;  
+    }
+
+    .left .right-inside .down{
+        font-size: 35px;
+        letter-spacing: 0.2vw;
+        font-weight: 400;
+        color: rgb(129, 129, 129);   
+        line-height: 50px;
+        cursor:default; 
+
+    }
 
 
-		.video-title{
-     display: block;
-		 font-family: Arial, Helvetica, sans-serif;
-		 font-size: 1.5vw;
-		 font-weight: bold;
-		 color:rgb(54, 54, 54);
-		 margin-top:0;
-		 margin-bottom: 8px;
-		}
-		.video-author, .video-stats{
-			display: block;
-			font-family: Arial, Helvetica, sans-serif;
-			font-size: 0.85vw;
-		  font-weight: 200;
-		  color:rgb(107, 107, 107);
-			margin: 1px;
-		}
-
-		/**/
-		
-
-
-		.profile-picture{
-			width: 3vw;
-			border-radius: 50%;
-			object-fit: cover;
-		}
 
 
 
-    </style>
-    </head>
+    .right{
+        position: relative;
+        width:60px;
+        right:0;
+        min-width: 60px;
+        margin-left: 20px;
+        border: 0px solid;
+        border-radius: 13px;
+        background-color: rgb(128, 128, 128);
+        transition: all 0.3s;
 
-    <body>
-			  <input class="search-bar" type="text" placeholder="Search">
+    }
+    .right:hover{
+        background-color: rgb(226, 226, 226);
+        box-shadow:  -13px 0px  rgb(128, 128, 128) ;
+        
 
-				<div class="video-grid">
-					<div class="video-preview">
-						<div>
-							<img class="IMAGE" src="image/2323.webp">
-						</div>
-	
-						<div class="video-info-grid">
-							<div class="channel-picture">
-								<img class="profile-picture" src="channel-picture/344.jpg">
-							</div>
-	
-							<div class="video-info">
-								<p class="video-title">
-								要是能夠找到大ＯＯ就好了</p>
-							<p class="video-author">
-								十六</p>
-							<p class="video-stats">
-								觀看次數:1234次。1小時前</p></div>
-						</div>
-					</div>
-	
-	
-					<div class="video-preview">
-						<div>
-							<img class="IMAGE" src="image/hqdefault.webp">
-						</div>
-	
-						<div class="video-info-grid">
-							<div class="channel-picture">
-								<img class="profile-picture" src="channel-picture/5453.jpg">
-							</div>
-	
-							<div class="video-info">
-								<p class="video-title">
-									【CrazyFace】連續OutplayS！這樣追我？搞清楚被狩獵的是你！｜這麼近為什麼射不到？特戰英豪</p>
-							<p class="video-author">
-								怪獸大廈</p>
-							<p class="video-stats">
-								觀看次數:1234次。1小時前</p></div>
-						</div>
-					</div>
-	
-	
-					<div class="video-preview">
-						<div>
-							<img class="IMAGE" src="image/2323.webp">
-						</div>
-	
-						<div class="video-info-grid">
-							<div class="channel-picture">
-								<img class="profile-picture" src="channel-picture/344.jpg">
-							</div>
-	
-							<div class="video-info">
-								<p class="video-title">
-								要是能夠找到大ＯＯ就好了</p>
-							<p class="video-author">
-								十六</p>
-							<p class="video-stats">
-								觀看次數:1234次。1小時前</p></div>
-						</div>
-					</div>
-	
-	
-					<div class="video-preview">
-						<div>
-							<img class="IMAGE" src="image/hqdefault.webp">
-						</div>
-	
-						<div class="video-info-grid">
-							<div class="channel-picture">
-								<img class="profile-picture" src="channel-picture/5453.jpg">
-							</div>
-	
-							<div class="video-info">
-								<p class="video-title">
-									【CrazyFace】連續OutplayS！這樣追我？搞清楚被狩獵的是你！｜這麼近為什麼射不到？特戰英豪</p>
-							<p class="video-author">
-								怪獸大廈</p>
-							<p class="video-stats">
-								觀看次數:1234次。1小時前</p></div>
-						</div>
-					</div>
-	
-					<div class="video-preview">
-						<div>
-							<img class="IMAGE" src="image/2323.webp">
-						</div>
-	
-						<div class="video-info-grid">
-							<div class="channel-picture">
-								<img class="profile-picture" src="channel-picture/344.jpg">
-							</div>
-	
-							<div class="video-info">
-								<p class="video-title">
-								要是能夠找到大ＯＯ就好了</p>
-							<p class="video-author">
-								十六</p>
-							<p class="video-stats">
-								觀看次數:1234次。1小時前</p></div>
-						</div>
-					</div>
-	
-	
-					<div class="video-preview">
-						<div>
-							<img class="IMAGE" src="image/hqdefault.webp">
-						</div>
-	
-						<div class="video-info-grid">
-							<div class="channel-picture">
-								<img class="profile-picture" src="channel-picture/5453.jpg">
-							</div>
-	
-							<div class="video-info">
-								<p class="video-title">
-									【CrazyFace】連續OutplayS！這樣追我？搞清楚被狩獵的是你！｜這麼近為什麼射不到？特戰英豪</p>
-							<p class="video-author">
-								怪獸大廈</p>
-							<p class="video-stats">
-								觀看次數:1234次。1小時前</p></div>
-						</div>
-					</div>
+    }
 
-				</div>
 
-	
-    </body>
+    .right .right-inside{
+        position: absolute;
+        left: 10px;
+        width: 60px;
+        height: 22.5vh;
+        border: 3px solid rgb(122, 122, 122);
+        cursor: pointer;
+        background-image: url(https://img.freepik.com/premium-vector/grid-gray-white-background-vector-illustration-eps-10_23979-425.jpg?w=2000);
+        background-size: 38vw;
+        border-radius: 13px;
+
+        /*display: flex;
+        align-items:center;
+        text-align: center;
+        justify-content: center;*/
+        
+        transition:all 0.3s;       
+    }
+
+    .right .right-inside:hover {
+        left:16px;
+        cursor: pointer;
+
+
+
+    }
+
+    .right .right-inside:after {
+        background-color: aqua;
+        content: "CLICK!";
+        position: absolute;
+        color: #00000000;
+        -webkit-text-stroke: 1px  #686868;
+        font-size: 30px;
+        font-weight: bold;
+        font-style: italic;
+        opacity: 1;
+        transition: all 0.3s;
+      }
+
+
+     /* .father-block{
+        transform: rotate(-90deg);
+        position: relative;
+        background-color: aquamarine;
+
+      }
+
+      .father-block:after {
+        background-color: aqua;
+        content: "CLICK!";
+        position: absolute;
+        color: #00000000;
+        -webkit-text-stroke: 1px  #686868;
+        font-size: 30px;
+        font-weight: bold;
+        font-style: italic;
+        opacity: 1;
+        transition: all 0.3s;
+      }
+      */
+
+      
+
+      
+
+  }
+            
+
+  </style>
+</head>
+
+<body style="margin: 0;">
+    <div class="first">
+        <div class="second">
+
+            <div class="left">
+                <div class="left-inside">
+                    Here is "<strong>UUDARKROOOM</strong>"
+                <br/>
+                <br/>
+                    It's a Gallery, a Black Box, a Journal, containing all about my experience in my life. 
+                </div>
+                <div class="right-inside">
+                    <div class="top">PRODUCE BY</div>
+                    <div class="down">WANG,<br/>SHUN-YU</div>
+                </div>
+            </div>
+
+            <div class="right">
+                <a href="https://www.youtube.com/?gl=TW" target="_blank">
+                  <div class="right-inside">
+
+                    
+                  </div>
+                </a>
+            </div>
+
+         </div>
+
+    </div>
+
+
+
+
+ 
+
+
+</body>
 </html>
